@@ -1,0 +1,21 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="Practice-It 2.0:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/Practice_It_2_0_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="Practice-It 2.0/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="Practice-It 2.0" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="file-copy" path="$PROJECT_DIR$/lib/json-simple-1.1.1.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/mysql-connector-java-5.1.38-bin.jar" />
+          <element id="library" level="project" name="org.mdkt.compiler:InMemoryJavaCompiler:1.2" />
+          <element id="library" level="project" name="com.googlecode.json-simple:json-simple:1.1.1" />
+          <element id="library" level="project" name="mysql:mysql-connector-java:5.1.38" />
+          <element id="library" level="project" name="jstl:jstl:1.2" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
