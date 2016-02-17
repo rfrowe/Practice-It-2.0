@@ -39,5 +39,4 @@ public class ProblemServlet extends HttpServlet {
             request.getRequestDispatcher("/problem/404.html").forward(request, response);
         }
     }
-
 }

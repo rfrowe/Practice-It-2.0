@@ -1,11 +1,11 @@
-body {
-    height: 100%;
+html, body {
+    min-height: 100vh;
 }
 
 section.main {
     background-color: #727272;
     width: 50%;
-    height: 100%;
+    min-height: 100vh;
     margin-left: auto;
     margin-right: auto;
     padding: 1em;
@@ -64,6 +64,7 @@ section.solution table input[type="text"] {
 }
 
 section.solution button {
+    outline: none;
     margin-top: 1em;
     background-color: #512DA8;
     color: #FFF;
@@ -73,8 +74,7 @@ section.solution button {
     border: none;
 }
 
-section.solution button:hover, section.solution button:active,
-section.solution button:focus {
+section.solution button:hover, section.solution button:active {
     box-shadow: 0 0 0.3em 0 #000000;
     background-color: #422285;
     border: none;
