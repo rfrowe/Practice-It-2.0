@@ -1,0 +1,63 @@
+section.main {
+    background-color: #727272;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1em;
+}
+
+body {
+    font: 100%/1.4em Verdana, Arial, Helvetica, sans-serif;
+    background-color: #212121;
+    margin: 0;
+    padding: 0;
+    color: #dfdfdf;
+}
+
+section.description {
+    border-bottom: 1px solid #FFF;
+    margin-bottom: 1em;
+}
+section.description pre {
+    white-space: pre-wrap;
+    font-family: monospace;
+    margin-left: 2em;
+}
+
+h1 {
+    text-align: center;
+    color: #512DA8;
+}
+
+h1.title {
+    margin-bottom: 0.5em;
+}
+
+h3 {
+    text-align: center;
+    color: #FFFFFF;
+}
+
+h3.subtitle {
+    margin-top: 0;
+    border-bottom: 1px solid #FFF;
+    padding-bottom: 0.5em;
+}
+
+section.solution table {
+    font-family: monospace;
+}
+
+section.solution table label {
+    margin-right: 2em;
+}
+
+section.solution table input {
+    border: 1px solid #000;
+}
+
+@media only screen and (max-width: 950px) {
+    section.main {
+        width: 90%;
+    }
+}
