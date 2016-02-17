@@ -21,4 +21,12 @@
         <url-pattern>/testing/</url-pattern>
         <url-pattern>/testing</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>ListProblems</servlet-name>
+        <servlet-class>com.practiceit.ListProblems</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ListProblems</servlet-name>
+        <url-pattern>/index.html</url-pattern>
+    </servlet-mapping>
 </web-app>

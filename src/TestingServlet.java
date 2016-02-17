@@ -1,6 +1,5 @@
 package com.practiceit;
 
-import com.sun.org.apache.bcel.internal.classfile.ClassFormatException;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
@@ -8,10 +7,8 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.jsp.JspWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.*;
 
 /**************************************************
  * @author Ryan Rowe (1531352)
@@ -45,7 +42,7 @@ public class TestingServlet extends HttpServlet {
                 while(str != null) {
                     // Replace empties with spaces to fix
                     // regex splitting
-                    if(str == "") {
+                    if(str.equals("")) {
                         str = " ";
                     }
 

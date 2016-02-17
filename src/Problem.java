@@ -71,7 +71,7 @@ public abstract class Problem {
         }
     }
 
-    private static List<Map<String, String>> resultSetToMap(ResultSet rs) throws SQLException {
+    static List<Map<String, String>> resultSetToMap(ResultSet rs) throws SQLException {
         List<Map<String, String>> list = new ArrayList<>();
         ResultSetMetaData meta = rs.getMetaData();
 

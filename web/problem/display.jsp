@@ -22,26 +22,9 @@
     <script src="${pageContext.request.contextPath}/lib/codemirror.js"></script>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/lib/codemirror.css"/>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/theme/lesser-dark.css"/>
-    <link rel="stylesheet" href="/style.css"/>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/style.css"/>
     <script src="${pageContext.request.contextPath}/mode/clike.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <style>
-        .line-error {
-            background-color: #ff9999 !important;
-        }
-
-        .incorrect {
-            background-color: #ff9999;
-        }
-
-        .correct {
-            background-color: #99ff99;
-        }
-
-        .almost {
-            background-color: #FFFF97;
-        }
-    </style>
     <script>
 
         $(window).load(function () {
@@ -52,8 +35,10 @@
                 if (codeMirror != null) {
                     codeMirror.save();
                 }
-                var data = $("#solutionForm").serialize();
-                $("#solutionForm :input").prop("disabled", true);
+                var solutionForm = $("#solutionForm");
+
+                var data = solutionForm.serialize();
+                solutionForm.find("input").prop("disabled", true);
                 $("#submit").text("Running...");
 
                 var url = "./testing"; // the script where you handle the form input.
@@ -108,8 +93,8 @@
                     case 6:
                         var s = "Compiler Error:\n";
                         clearLines();
-                        for (var i = 0; i < data.errors.length; i++) {
-                            var x = data.errors[i];
+                        for (var j = 0; j < data.errors.length; j++) {
+                            var x = data.errors[j];
                             codeMirror.addLineClass(x.line - 1, "background", "line-error");
                             s += x.line;
                             s += "\n";
@@ -135,7 +120,7 @@
         }
 
         function enableForm() {
-            $("#solutionForm :input").prop("disabled", false);
+            $("#solutionForm").find("input").prop("disabled", false);
             $("#submit").text("Test It");
         }
 
@@ -167,9 +152,7 @@
 <body>
 <section class="main">
     <% if(problem != null) { %>
-    <h1 class="title"><%= problem.getTitle() %>
-    </h1>
-
+    <h1 class="title"><%= problem.getTitle() %></h1>
     <h3 class="subtitle"><%= problem.getType() %> Problem</h3>
     <section class="description">
         <%= problem.getDescription() %>
@@ -196,7 +179,7 @@
                 } %>
             <input name="id" type="hidden" value="<%= problem.getId() %>"
                    placeholder="Code"/>
-            <button type="submit" id="submit">Test It</button>
+            <button type="submit" id="submit" class="trans">Test It</button>
         </form>
     </section>
     <% } %>

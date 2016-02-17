@@ -1,6 +1,11 @@
+body {
+    height: 100%;
+}
+
 section.main {
     background-color: #727272;
     width: 50%;
+    height: 100%;
     margin-left: auto;
     margin-right: auto;
     padding: 1em;
@@ -18,6 +23,7 @@ section.description {
     border-bottom: 1px solid #FFF;
     margin-bottom: 1em;
 }
+
 section.description pre {
     white-space: pre-wrap;
     font-family: monospace;
@@ -52,8 +58,81 @@ section.solution table label {
     margin-right: 2em;
 }
 
-section.solution table input {
+section.solution table input[type="text"] {
     border: 1px solid #000;
+    width: 15em;
+}
+
+section.solution button {
+    margin-top: 1em;
+    background-color: #512DA8;
+    color: #FFF;
+    font-size: 1em;
+    padding: 0.5em;
+    width: 25%;
+    border: none;
+}
+
+section.solution button:hover, section.solution button:active,
+section.solution button:focus {
+    box-shadow: 0 0 0.3em 0 #000000;
+    background-color: #422285;
+    border: none;
+}
+
+.trans {
+    -webkit-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+
+.cm-s-lesser-dark.CodeMirror {
+    width: 100%;
+}
+
+.line-error {
+    background-color: #ff9999 !important;
+}
+
+.incorrect {
+    background-color: #ff9999;
+}
+
+.correct {
+    background-color: #99ff99;
+}
+
+.almost {
+    background-color: #FFFF97;
+}
+
+table.problemList {
+    width: 100%;
+    border-top: 1px solid #fff;
+    padding-top: 1em;
+}
+
+table.problemList th {
+    background-color: #673AB7;
+    text-align: left;
+}
+
+table.problemList th, table.problemList td {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+}
+
+table.problemList .id {
+    text-align: center;
+}
+
+table.problemList td a {
+    color: unset;
+    padding-right: 0.8em;
+    background: transparent url("/files/link_white.svg") right top no-repeat;
+    background-size: 0.8em 0.8em;
 }
 
 @media only screen and (max-width: 950px) {
