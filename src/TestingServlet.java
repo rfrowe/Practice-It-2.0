@@ -52,13 +52,12 @@ public class TestingServlet extends HttpServlet {
                 }
                 testHarness.setAttempt(attempt.toString());
             } else {
-                System.out.println("Setting attempt to " + request.getParameter("attempt"));
                 testHarness.setAttempt(request.getParameter("attempt"));
 
                 JSONArray errors = testHarness.compile();
 
                 if(errors != null) {
-                    JSONObject obj = new JSONObject();
+                    JSONObject obj = testHarness.toJSON();
                     obj.put("error", TestHarness.Codes.COMPILER_ERROR.code());
                     obj.put("errors", errors);
                     out.print(obj);

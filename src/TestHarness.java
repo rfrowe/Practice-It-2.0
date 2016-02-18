@@ -35,13 +35,8 @@ public class TestHarness {
     }
 
     public JSONArray compile() {
-        try {
-            Map<String, Object> map = problem.compile();
-            return (JSONArray) map.get("errors");
-        } catch(Exception e) {
-
-        }
-        return null;
+        Map<String, Object> map = problem.compile();
+        return (JSONArray) map.get("errors");
     }
 
     public void setAttempt(String attempt) {
@@ -111,7 +106,7 @@ public class TestHarness {
 
         for(Diagnostic diag : diags) {
             JSONObject diagnostic = new JSONObject();
-            diagnostic.put("type", diag.getCode());
+            diagnostic.put("kind", diag.getKind().toString());
             diagnostic.put("line", diag.getLineNumber() - insertLine + 1);
             diagnostic.put("message", diag.getMessage(Locale.US));
             json.add(diagnostic);

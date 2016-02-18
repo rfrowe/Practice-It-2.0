@@ -1,6 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ page import="com.practiceit.Problem" %>
 <%@ page import="com.practiceit.Mystery" %>
+<%@ page import="com.practiceit.Problem" %>
 <%@ page import="java.util.*" %>
 
 <%
@@ -62,7 +62,7 @@
         });
 
         function parseResults(data) {
-            var error = data.error;
+            error = data.error;
             if (error == null) {
                 var tests = data.tests;
                 if (data.type.toUpperCase() === "MYSTERY") {
@@ -98,7 +98,7 @@
                             codeMirror.addLineClass(x.line - 1, "background", "line-error");
                             s += x.line;
                             s += "\n";
-                            s += x.type;
+                            s += x.kind;
                             s += "\n";
                             s += x.message;
                             s += "\n";

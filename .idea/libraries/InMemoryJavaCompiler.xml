@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="InMemoryJavaCompiler">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/InMemoryJavaCompiler.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

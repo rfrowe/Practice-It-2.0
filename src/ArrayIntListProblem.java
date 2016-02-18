@@ -2,6 +2,7 @@ package com.practiceit;
 
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
+
 import java.util.*;
 
 /**************************************************
@@ -14,7 +15,7 @@ import java.util.*;
  *         Description
  **************************************************/
 
-public class ArrayIntListProblem extends Problem {
+public class ArrayIntListProblem extends CodingProblem {
     public ArrayIntListProblem(int id, Map<String, String> results) {
         super(id, results);
     }
@@ -25,11 +26,6 @@ public class ArrayIntListProblem extends Problem {
 
     @Override
     JSONArray run() {
-        return null;
-    }
-
-    @Override
-    public Map<String, Object> compile() throws Exception {
         return null;
     }
 }

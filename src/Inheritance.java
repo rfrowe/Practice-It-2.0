@@ -2,6 +2,7 @@ package com.practiceit;
 
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
+
 import java.util.*;
 
 /**************************************************
@@ -29,7 +30,7 @@ public class Inheritance extends Problem{
     }
 
     @Override
-    public Map<String, Object> compile() throws Exception {
+    public Map<String, Object> compile() {
         return null;
     }
 }

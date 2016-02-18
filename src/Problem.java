@@ -1,6 +1,8 @@
 package com.practiceit;
+
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
+
 import java.sql.*;
 import java.util.*;
 
@@ -41,7 +43,7 @@ public abstract class Problem {
                 return new MethodReturn(id, results);
             case "METHODPRINT":
                 return new MethodPrint(id, results);
-            case "LINKEDLIST":
+            case "LINKEDINTLIST":
                 return new LinkedListProblem(id, results);
             default:
                 throw new IllegalArgumentException("Invalid Problem Type");
@@ -139,7 +141,7 @@ public abstract class Problem {
     }
     abstract JSONArray run();
 
-    abstract Map<String, Object> compile() throws Exception; /*{
+    abstract Map<String, Object> compile(); /*{
 
     }*/
 
