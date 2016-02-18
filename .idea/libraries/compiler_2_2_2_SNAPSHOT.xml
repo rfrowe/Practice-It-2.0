@@ -1,7 +1,7 @@
 <component name="libraryTable">
-  <library name="InMemoryJavaCompiler">
+  <library name="compiler-2.2.2-SNAPSHOT">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/lib/InMemoryJavaCompiler.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/compiler-2.2.2-SNAPSHOT.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

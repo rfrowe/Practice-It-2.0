@@ -23,6 +23,6 @@
     <orderEntry type="library" name="mysql:mysql-connector-java:5.1.38" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="javax.servlet.jsp:javax.servlet.jsp-api:2.3.2-b02" level="project" />
     <orderEntry type="library" name="jstl:jstl:1.2" level="project" />
-    <orderEntry type="library" name="InMemoryJavaCompiler" level="project" />
+    <orderEntry type="library" name="compiler-2.2.2-SNAPSHOT" level="project" />
   </component>
 </module>
